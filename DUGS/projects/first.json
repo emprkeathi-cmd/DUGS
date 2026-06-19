@@ -1,0 +1,28 @@
+{
+  "name": "first",
+  "nodes": [
+    {
+      "name": "Wait 4",
+      "type": "core.wait",
+      "params": {},
+      "_x": 247.53125,
+      "_y": 139.3203125
+    },
+    {
+      "name": "Manual Trigger 5",
+      "type": "trigger.manual",
+      "params": {},
+      "_x": 151.828125,
+      "_y": 140.6171875
+    }
+  ],
+  "connections": {
+    "Manual Trigger 5": [
+      {
+        "to": "Wait 4",
+        "out": 0,
+        "in": 0
+      }
+    ]
+  }
+}

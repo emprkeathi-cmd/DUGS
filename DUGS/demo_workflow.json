@@ -1,0 +1,24 @@
+{
+  "name": "demo",
+  "nodes": [
+    {
+      "name": "Start",
+      "type": "trigger.manual",
+      "params": { "data": { "message": "hello", "count": 1 } }
+    },
+    {
+      "name": "Add Fields",
+      "type": "core.set",
+      "params": { "fields": { "stage": "processed", "count": 2 } }
+    },
+    {
+      "name": "Show Result",
+      "type": "core.log",
+      "params": { "label": "OUTPUT" }
+    }
+  ],
+  "connections": {
+    "Start":      [{ "to": "Add Fields",  "out": 0, "in": 0 }],
+    "Add Fields": [{ "to": "Show Result", "out": 0, "in": 0 }]
+  }
+}
